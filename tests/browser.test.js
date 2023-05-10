@@ -13,7 +13,7 @@ describe('Webbsida', () => {
 
   it('testar att sidan laddas korrekt', async () => {
     await driver.get('http://127.0.0.1:5500/dist/');
-    await driver.wait(until.titleIs('Example Domain'), 1000);
-  });
+    await driver.wait(until.titleIs('En stack'), 100000);
+  }, 15000);
 });
 

@@ -1,3 +1,8 @@
+const Stack = require('../src/stack.js'); // Importera Stack-klassen från stack.js
+
+
+
+
 describe('Stack', () => {
     // testfall kommer att skrivas här
   });

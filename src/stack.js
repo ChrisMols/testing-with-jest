@@ -1,18 +1,35 @@
-var _ = require('underscore');
-
-let stack = [];
-
-// Lägger ett element överst i stacken
-exports.push = function (x) {
-    stack.push(x);
-};
-
-// Returnerar det översta elementet i stacken och tar bort det
-exports.pop = function () {
-    return stack.pop();
-}
-
-// Returnerar det översta elementet i stacken
-exports.peek = function () {
-    return _.last(stack)
-}
+class Stack {
+    constructor() {
+      this.items = [];
+    }
+  
+    push(item) {
+      this.items.push(item);
+    }
+  
+    pop() {
+      if (this.isEmpty()) {
+        throw new Error('Stack is empty');
+      }
+      return this.items.pop();
+    }
+  
+    peek() {
+      if (this.isEmpty()) {
+        throw new Error('Stack is empty');
+      }
+      return this.items[this.items.length - 1];
+    }
+  
+    isEmpty() {
+      return this.items.length === 0;
+    }
+  
+    size() {
+      return this.items.length;
+    }
+  }
+  
+  module.exports = Stack;
+  
+  
